@@ -5,7 +5,7 @@ import "./Header.css"
 
 const Header = () => {
     const [email, setEmail] = useContext(emailContext);
-    console.log('from emai', email);
+    console.log('from email', email);
     
     return (
         <div className='headers'>

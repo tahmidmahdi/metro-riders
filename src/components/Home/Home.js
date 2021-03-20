@@ -3,7 +3,7 @@ import background from "../../images/Bg.png"
 import './Home.css'
 import data from '../../data/data.json'
 import Transport from '../Transport/Transport';
-// import Transport from '../Transport/Transport';
+
 
 const Home = () => {
     const[transports, setTransport] =  useState([])

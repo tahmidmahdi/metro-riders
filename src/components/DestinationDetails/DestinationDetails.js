@@ -1,8 +1,7 @@
 import React, { useContext } from 'react';
 import './DestinationDetails.css'
-import map from '../../images/Map.png'
 import { transportContext } from '../../App';
-import { faCoffee, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const DestinationDetails = () => {
