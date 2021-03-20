@@ -1,0 +1,29 @@
+.top-left {
+    position: absolute;
+    top: 0px;
+    left: 336px;
+  }
+.top-right {
+    position: absolute;
+    top: 0px;
+    right: 336px;
+    margin-top: 40px;
+
+}
+.link{
+    margin: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.headers{
+    border-bottom: 1px solid gray;
+    margin-top: 110px;
+}
+.linkp{
+    text-align: center;
+    font-weight: 700;
+    color: red;
+    margin: 10px;
+}

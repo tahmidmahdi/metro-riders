@@ -1,0 +1,9 @@
+.containers{
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .containers img{
+    height: 80px;
+    width: 300px;
+  }

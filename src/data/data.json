@@ -1,0 +1,31 @@
+[{
+    "id": 0,
+    "type": "BIKE",
+    "person": 2,
+    "price": 69,
+    "image": "https://i.imgur.com/YIL0ni6.png",
+    "email": ""
+
+  }, {
+    "id": 1,
+    "type": "CAR",
+    "person": 4,
+    "price": 55,
+    "image": "https://i.imgur.com/R18jTtI.png",
+    "email": ""
+  }, {
+    "id": 2,
+    "type": "BUS",
+    "person": 1,
+    "price": 89,
+    "image": "https://i.imgur.com/LYgDPar.png",
+    "email": ""
+
+  }, {
+    "id": 3,
+    "type": "TRAIN",
+    "person": 1,
+    "price": 44,
+    "image": "https://i.imgur.com/mdrstPy.png",
+    "email": ""
+  }]

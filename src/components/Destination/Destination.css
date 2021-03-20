@@ -1,0 +1,23 @@
+.ship-form{
+    margin: 30px 100px;
+    background-color: rgba(239,239,239,255);
+    width: 400px;
+    height: 300px;
+    
+    /* text-align: center; */
+}
+.ship-form input{
+    margin-left: 40px;
+    display:block;
+    /* margin-top: 30px; */
+    padding: 5px;
+    border:1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+}
+.ship-form label{
+    margin-left: 40px;
+}
+.error{
+    color: red
+}

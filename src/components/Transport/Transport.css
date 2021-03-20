@@ -1,0 +1,21 @@
+.transport {
+    
+    height: 300px;
+    width: 200px;
+    /* border: 2px solid black; */
+    background-color: white;
+    padding: 15px;
+    margin:15px;
+}
+.transport img{
+    height: 200px;
+    height: 150px
+}
+.transport h5{
+    margin-top: 60px;
+}
+.main{
+    text-align: center;
+    float: left; 
+    margin-left: 20px; 
+}
