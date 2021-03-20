@@ -6,12 +6,17 @@ import firebaseConfig from './firebase.config';
 import { useContext, useState } from 'react';
 import "./Login.css"
 import { emailContext } from "../../App";
+import { useHistory, useLocation } from "react-router";
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
 
 
 function App() {
+    let history = useHistory();
+    let location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
+
    
 
     const [email, setEmail] = useContext(emailContext)
@@ -70,6 +75,7 @@ function App() {
                     setUser(newUserInfo);
                     console.log(user);
                     setEmail(user.email);
+                    history.replace(from);
                     
                     
                 })
@@ -95,6 +101,7 @@ function App() {
                     setUser(newUserInfo);
                     console.log(user);
                     setEmail(user.email);
+                    history.replace(from);
                     
 
 
@@ -130,6 +137,7 @@ function App() {
                 // The signed-in user info.
                 var user = result.user;
                 setEmail(user.email);
+                history.replace(from);
                 // ...
             }).catch((error) => {
                 // Handle Errors here.

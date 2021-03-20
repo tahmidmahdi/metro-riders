@@ -10,6 +10,7 @@ import { createContext, useState } from 'react';
 import Destination from './components/Destination/Destination';
 import DestinationDetails from './components/DestinationDetails/DestinationDetails';
 import Login from './components/Login/Login';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const transportContext = createContext()
 export const emailContext = createContext();
@@ -31,10 +32,10 @@ function App() {
               <Home></Home>
               <Header></Header>
             </Route>
-            <Route path="/destination/:type">
+            <PrivateRoute path="/destination/:type">
               <Header></Header>
               <Destination></Destination>
-            </Route>
+            </PrivateRoute>
             <Route path="/:type/details">
               <DestinationDetails></DestinationDetails>
             </Route>
