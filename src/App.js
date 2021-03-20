@@ -26,14 +26,14 @@ function App() {
           <Switch>
             <Route path="/home">
               <Home></Home>
-              <Header></Header>
+              {/* <Header></Header> */}
             </Route>
             <Route exact path="/">
               <Home></Home>
-              <Header></Header>
+              {/* <Header></Header> */}
             </Route>
             <PrivateRoute path="/destination/:type">
-              <Header></Header>
+              
               <Destination></Destination>
             </PrivateRoute>
             <Route path="/:type/details">
