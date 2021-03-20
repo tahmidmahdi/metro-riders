@@ -7,6 +7,7 @@ import './Transport.css'
 const Transport = (props) => {
     const {type,id,image} = props.transport
     const [transport, setTransport] = useContext(transportContext);
+    console.log(transport);
     
     console.log(id);
     return (

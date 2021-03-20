@@ -126,6 +126,7 @@ function App() {
 
                 // This gives you a Google Access Token. You can use it to access the Google API.
                 var token = credential.accessToken;
+                console.log(token);
                 // The signed-in user info.
                 var user = result.user;
                 setEmail(user.email);
@@ -138,6 +139,7 @@ function App() {
                 var email = error.email;
                 // The firebase.auth.AuthCredential type that was used.
                 var credential = error.credential;
+                console.log(errorCode, errorMessage, email, credential);
                 // ...
             });
     }

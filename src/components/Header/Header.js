@@ -4,7 +4,7 @@ import { emailContext } from '../../App';
 import "./Header.css"
 
 const Header = () => {
-    const [email, setEmail] = useContext(emailContext);
+    const [email] = useContext(emailContext);
     console.log('from email', email);
     
     return (
