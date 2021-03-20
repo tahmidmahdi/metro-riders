@@ -1,11 +1,11 @@
-// import './App.css';
+
 import firebase from "firebase/app";
-// import logo from './images/logo2.png'
+
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useContext, useState } from 'react';
 import "./Login.css"
-import { emailContext, transportContext } from "../../App";
+import { emailContext } from "../../App";
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
@@ -13,7 +13,7 @@ if (!firebase.apps.length) {
 
 function App() {
    
-    // const [email, setEmail] = useContext(transportContext)
+
     const [email, setEmail] = useContext(emailContext)
     console.log('email of', email);
     
