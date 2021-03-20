@@ -3,7 +3,7 @@ import { Redirect, Route } from 'react-router';
 import { emailContext } from '../../App';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const [email, setEmail] = useContext(emailContext);
+    const [email] = useContext(emailContext);
     return (
         <Route
             {...rest}
