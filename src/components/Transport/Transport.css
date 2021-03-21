@@ -24,7 +24,11 @@
       height: 120px;
       top: 0px;
       margin-top: 20px;
-      display: flex;
+      /* float:inline-start */
+      /* display: flex; */
+      
+      
+
       
     }
     .transport img{
