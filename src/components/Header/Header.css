@@ -1,7 +1,8 @@
 .top-left {
     position: absolute;
     top: 0px;
-    left: 336px;
+    left: 800px;
+    /* text-align: center; */
   }
 .top-right {
     position: absolute;
@@ -19,11 +20,24 @@
 }
 .headers{
     border-bottom: 1px solid gray;
-    margin-top: 110px;
+    margin-top: 60px;
 }
-.linkp{
+
+.button{
+    background-image: linear-gradient(45deg, red, orange);
+    width: 100px;
     text-align: center;
-    font-weight: 700;
-    color: red;
-    margin: 10px;
+    border-radius: 20px;
 }
+.button-login{
+    background-image: linear-gradient(45deg, red, orange);
+    border-radius: 20px;
+}
+@media only screen and (max-width: 600px){
+    .top-left{
+        
+        /* background-color: orange; */
+        left: 100px;
+    }
+}
+

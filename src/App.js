@@ -32,8 +32,10 @@ function App() {
               <Home></Home>
               {/* <Header></Header> */}
             </Route>
+            <PrivateRoute path="/destination">
+              <Destination></Destination>
+            </PrivateRoute>
             <PrivateRoute path="/destination/:type">
-              
               <Destination></Destination>
             </PrivateRoute>
             <Route path="/:type/details">

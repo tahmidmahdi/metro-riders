@@ -1,8 +1,11 @@
 .ship-form{
     margin: 30px 100px;
-    background-color: rgba(239,239,239,255);
+    /* background-color: rgba(239,239,239,255); */
     width: 400px;
     height: 300px;
+    /* border-right: 2px solid yellow; */
+    border-bottom: 5px solid orange;
+    border-right:5px solid lightsalmon;
     
     /* text-align: center; */
 }
@@ -21,3 +24,11 @@
 .error{
     color: red
 }
+
+
+@media only screen and (max-width: 600px) {
+    .destination {
+      background-color: blue;
+
+    }
+  }

@@ -14,7 +14,7 @@ const DestinationDetails = () => {
         <div classNameName="d-flex justify-content-around">
             <div class="container">
                 <div class="wrapper">
-                    <h1> Route Description 😅</h1>
+                    <h1> Route Description  😇 </h1>
                     <ul class="sessions">
                         <li>
                             <div class="time">09:00 AM</div>

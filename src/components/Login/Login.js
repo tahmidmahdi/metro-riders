@@ -7,6 +7,9 @@ import { useContext, useState } from 'react';
 import "./Login.css"
 import { emailContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
+import { faFacebookSquare, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
@@ -215,7 +218,7 @@ function App() {
 
                 <br /><br />
 
-                <input style={{ width: '190px' }} type="submit" className="btn btn-danger" value={newUser ? 'Sign Up' : 'Sign In'} />
+                <input style={{ width: '190px' }} type="submit" className="btn btn-danger" value={newUser ?'Sign Up' : 'Sign In'} />
 
             </form>
             <p>{user.error}</p>
@@ -224,9 +227,9 @@ function App() {
             }
             <br />
             <p><strong>----------------Or----------------</strong></p>
-            <button className="google btn btn-warning"  onClick = {handleGoogleSignIn}>Google Sign In</button>
+            <button className="google btn btn-warning"  onClick = {handleGoogleSignIn}><FontAwesomeIcon  icon={faGoogle } size="1x"/>  {' '} Google Sign In </button>
             <br/> <br/>
-            <button className="google btn btn-warning" onClick={handleFacebookSignIn}>Facebook Sign In</button>
+            <button className="google btn btn-warning" onClick={handleFacebookSignIn}><FontAwesomeIcon  icon={faFacebookSquare } size="1x"/> Facebook Sign In</button>
 
         </div>
     );

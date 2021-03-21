@@ -22,9 +22,9 @@ const Header = () => {
                         <Link className='link' to='/destination'>Destination</Link>
                         <Link className='link' to='/blog'>Blog</Link>
                         <Link className='link' to='/contract'>Contract</Link>
-                        {(!email) && <Link className='link' to='/login'>Login</Link>}
+                        {(!email) && <Link  className='link button' to='/login'>Login</Link>}
                         {
-                            (email) && <p className='link'>{email}</p>
+                            (email) && <p  className='link button-login'>{email}</p>
                         }
 
                     </Nav>

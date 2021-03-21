@@ -14,7 +14,7 @@ const Home = () => {
     return (
     
         <div>
-            <div className='bg'><img className="bg-img" src={background} alt=""/></div>
+            <div className='bg'><img className="bg-img img-fluid " src={background} alt=""/></div>
             <div className='centered'>
                 {
                     transports.map(transport => <Transport transport={transport} key={transport.key}></Transport>)

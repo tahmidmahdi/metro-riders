@@ -11,7 +11,7 @@ const Transport = (props) => {
     
     console.log(id);
     return (
-        <div className='main'>
+        <div className='main d-flex align-items-center'>
             <Link to={`/destination/${type}`}>
                 <div onClick={()=> setTransport(props.transport)} className="transport">
                     <img src={image} alt=""/>
