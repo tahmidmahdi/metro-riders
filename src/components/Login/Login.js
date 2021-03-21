@@ -9,7 +9,7 @@ import { emailContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
 import { faFacebookSquare, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 }
