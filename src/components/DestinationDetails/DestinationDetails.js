@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './DestinationDetails.css'
-import { transportContext } from '../../App';
+import { routeContext, transportContext } from '../../App';
 import { faUsers } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -8,6 +8,8 @@ const DestinationDetails = () => {
     const [transport] = useContext(transportContext)
     const { image, type, person, price } = transport;
     console.log(transport);
+
+    const[routeDetails] = useContext(routeContext);
 
 
     return (
@@ -18,11 +20,11 @@ const DestinationDetails = () => {
                     <ul class="sessions">
                         <li>
                             <div class="time">09:00 AM</div>
-                            <p>Dhanmondi 🤯🤯</p>
+                            <p><strong>{routeDetails.from}</strong> 🤯🤯</p>
                         </li>
                         <li>
                             <div class="time">10:05 AM</div>
-                            <p>Mirpur -11 🤷..</p>
+                            <p><strong>{routeDetails.to}</strong> 🤷..</p>
                         </li>
 
                     </ul>

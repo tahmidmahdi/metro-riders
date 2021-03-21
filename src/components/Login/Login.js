@@ -1,6 +1,5 @@
 
 import firebase from "firebase/app";
-
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useContext, useState } from 'react';

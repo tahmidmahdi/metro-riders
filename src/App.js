@@ -12,40 +12,44 @@ import DestinationDetails from './components/DestinationDetails/DestinationDetai
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
-export const transportContext = createContext()
-export const emailContext = createContext();
+export const transportContext = createContext() // contains transport that is clicked
+export const emailContext = createContext();  // contains emails that will be given by user 
+export const routeContext = createContext();  // contains route details
 
 function App() {
   const [transport, setTransport] = useState({})
   const [email, setEmail] = useState('');
+  const [routeDetails, setRouteDetails] = useState({});
   return (
     <transportContext.Provider value = {[transport, setTransport]}>
      <emailContext.Provider value={[email,setEmail]}>
-        <Router>
-          <Header></Header>
-          <Switch>
-            <Route path="/home">
-              <Home></Home>
-              {/* <Header></Header> */}
-            </Route>
-            <Route exact path="/">
-              <Home></Home>
-              {/* <Header></Header> */}
-            </Route>
-            <PrivateRoute path="/destination">
-              <Destination></Destination>
-            </PrivateRoute>
-            <PrivateRoute path="/destination/:type">
-              <Destination></Destination>
-            </PrivateRoute>
-            <Route path="/:type/details">
-              <DestinationDetails></DestinationDetails>
-            </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-          </Switch>
-        </Router>
+        <routeContext.Provider value={[routeDetails, setRouteDetails]}>
+          <Router>
+            <Header></Header>
+            <Switch>
+              <Route path="/home">
+                <Home></Home>
+              
+              </Route>
+              <Route exact path="/">
+                <Home></Home>
+               
+              </Route>
+              <PrivateRoute path="/destination">
+                <Destination></Destination>
+              </PrivateRoute>
+              <PrivateRoute path="/destination/:type">
+                <Destination></Destination>
+              </PrivateRoute>
+              <Route path="/:type/details">
+                <DestinationDetails></DestinationDetails>
+              </Route>
+              <Route path="/login">
+                <Login></Login>
+              </Route>
+            </Switch>
+          </Router>
+        </routeContext.Provider>
      </emailContext.Provider>
     </transportContext.Provider>
   );

@@ -1,6 +1,7 @@
-import React, {  useState } from 'react';
+import React, {  useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router';
+import { routeContext } from '../../App';
 // import { transportContext } from '../../App';
 import './Destination.css'
 // import map from '../../images/Map.png'
@@ -9,8 +10,10 @@ import './Destination.css'
 
 
 const Destination = () => {
-  // const [transport, setTransport] = useContext(transportContext);
-  // console.log('transport', transport);
+
+  const [routeDetails, setRouteDetails] = useContext(routeContext);
+  console.log('route Details',routeDetails);
+  
   const {type}= useParams()
   console.log('params', type);
 
@@ -24,7 +27,8 @@ const Destination = () => {
 
 
       console.log(data)
-      setDestination(data)
+      setDestination(data);
+      setRouteDetails(data);
       history.push(`/${type}/details`)
       
       
