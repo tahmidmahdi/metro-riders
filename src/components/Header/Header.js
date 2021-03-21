@@ -13,7 +13,7 @@ const Header = () => {
 
             <h1 style={{ fontSize: "55px" }} className='top-left'><strong>Metro Riders</strong></h1>
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">Metro Riders</Navbar.Brand>
+                {/* <Navbar.Brand href="#home">Metro Riders</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
@@ -34,16 +34,7 @@ const Header = () => {
                     </Form>
                 </Navbar.Collapse>
             </Navbar> 
-            {/* <nav className='top-right'>
-                <Link className='link' to='/home'>Home</Link>
-                <Link className='link' to='/destination'>Destination</Link>
-                <Link className='link' to='/blog'>Blog</Link>
-                <Link className='link' to='/contract'>Contract</Link>
-                {(!email) && <Link className='link' to='/login'>Login</Link>}
-                {
-                    (email) && <p className='linkp'>{email}</p>
-                }
-            </nav> */}
+           
 
 
 

@@ -11,6 +11,7 @@ import Destination from './components/Destination/Destination';
 import DestinationDetails from './components/DestinationDetails/DestinationDetails';
 import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Contracts from './components/Contracts/Contracts';
 
 export const transportContext = createContext() // contains transport that is clicked
 export const emailContext = createContext();  // contains emails that will be given by user 
@@ -46,6 +47,9 @@ function App() {
               </Route>
               <Route path="/login">
                 <Login></Login>
+              </Route>
+              <Route path="/contract">
+                <Contracts></Contracts>
               </Route>
             </Switch>
           </Router>

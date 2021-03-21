@@ -1,7 +1,7 @@
 import React, {  useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useHistory, useParams } from 'react-router';
-import { routeContext } from '../../App';
+import { useHistory } from 'react-router';
+import { routeContext, transportContext } from '../../App';
 // import { transportContext } from '../../App';
 import './Destination.css'
 // import map from '../../images/Map.png'
@@ -10,12 +10,15 @@ import './Destination.css'
 
 
 const Destination = () => {
+  const [transport] = useContext(transportContext);
+  const {type} = transport;
+
+
 
   const [routeDetails, setRouteDetails] = useContext(routeContext);
   console.log('route Details',routeDetails);
   
-  const {type}= useParams()
-  console.log('params', type);
+
 
   const[destination, setDestination] =  useState({})
     const {from, to} = destination;
@@ -44,16 +47,16 @@ const Destination = () => {
        <div className="d-flex justify-content-around mt-5 destination">
   
             <form className='ship-form' onSubmit={handleSubmit(onSubmit)}>
-              <label htmlFor="from">From</label>
-              <input name="from" ref={register({ required: true })} />
+              <label htmlFor="from" style={{fontWeight:"700"}}>From</label>
+              <input name="from" ref={register({ required: true })} placeholder='Journey Begins From...'/>
               {errors.from && <span className='error'>From required</span>}
               <br/>
   
-              <label htmlFor="to">To</label>
-              <input name="to" ref={register({ required: true })} />
+              <label htmlFor="to" style={{fontWeight:"700"}}>To</label>
+              <input name="to" ref={register({ required: true })} placeholder='Journey Ends To...' />
               {errors.to && <span className='error'>To is required</span>}
               <br/> <br/>
-             <input className="bg-warning" type="submit" />
+             <input className="bg-warning" style={{fontWeight:"700"}} type="submit" />
             </form>
             <div>
                 {/* <img src={map} alt=""/> */}
